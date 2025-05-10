@@ -6,7 +6,7 @@ class ChoiceSerializer(serializers.ModelSerializer):
     """Serializador para el modelo Choice (opción)"""
     class Meta:
         model = Choice
-        fields = ['id', 'text', 'is_correct']
+        fields = ['id', 'question', 'text', 'is_correct']
 
 
 class QuestionSerializer(serializers.ModelSerializer):
