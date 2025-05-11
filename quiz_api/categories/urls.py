@@ -9,3 +9,4 @@ router.register(r'tags', TagViewSet)
 urlpatterns = [
     path('', include(router.urls)),
 ]
+
