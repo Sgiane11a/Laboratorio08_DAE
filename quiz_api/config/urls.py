@@ -20,5 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('quizzes.urls')),  # Incluye las rutas de la API
+    path('api/categories/', include('categories.urls')),  # Incluye las rutas de categorías y etiquetas
     path('api-auth/', include('rest_framework.urls')),  # Para login/logout en el navegador
 ]
