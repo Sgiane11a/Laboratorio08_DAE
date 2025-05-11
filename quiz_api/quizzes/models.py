@@ -7,6 +7,19 @@ class Quiz(models.Model):
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    category = models.ForeignKey(
+        'categories.Category',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='quizzes'
+    )
+    tags = models.ManyToManyField(
+        'categories.Tag',
+        related_name='quizzes',
+        blank=True
+    )
     
     class Meta:
         verbose_name_plural = "quizzes"

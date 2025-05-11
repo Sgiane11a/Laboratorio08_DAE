@@ -17,6 +17,7 @@ class QuizAdmin(admin.ModelAdmin):
     list_display = ['title', 'created_at']
     search_fields = ['title', 'description']
     inlines = [QuestionInline]
+    filter_horizontal = ('tags',)
 
 
 @admin.register(Question)
